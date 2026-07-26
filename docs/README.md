@@ -1,36 +1,24 @@
-# Spika legal pages (GitHub Pages)
+# Spika legal pages
 
-Public Terms of Service and Privacy Policy for store listings and in-app links.
+Legal HTML lives in the **public** repo [`MoeAmara/spika-legal`](https://github.com/MoeAmara/spika-legal)
+so Google Play and users can open the links without access to the private Spika repo.
 
-## Live URLs (after Pages is enabled)
+## Live URLs
 
-Base: `https://moeamara.github.io/Spika/`
+Base: `https://moeamara.github.io/spika-legal/`
 
 | Document | English | Arabic |
 |----------|---------|--------|
-| Hub | [index.html](https://moeamara.github.io/Spika/) | [index-ar.html](https://moeamara.github.io/Spika/index-ar.html) |
-| Privacy | [privacy.html](https://moeamara.github.io/Spika/privacy.html) | [privacy-ar.html](https://moeamara.github.io/Spika/privacy-ar.html) |
-| Terms | [terms.html](https://moeamara.github.io/Spika/terms.html) | [terms-ar.html](https://moeamara.github.io/Spika/terms-ar.html) |
+| Hub | [index.html](https://moeamara.github.io/spika-legal/) | [index-ar.html](https://moeamara.github.io/spika-legal/index-ar.html) |
+| Privacy | [privacy.html](https://moeamara.github.io/spika-legal/privacy.html) | [privacy-ar.html](https://moeamara.github.io/spika-legal/privacy-ar.html) |
+| Terms | [terms.html](https://moeamara.github.io/spika-legal/terms.html) | [terms-ar.html](https://moeamara.github.io/spika-legal/terms-ar.html) |
 
-**Google Play:** use the English Privacy URL:
-`https://moeamara.github.io/Spika/privacy.html`
-
-## Enable GitHub Pages
-
-1. Push this `docs/` folder to the `main` branch on `MoeAmara/Spika`.
-2. Repo **Settings → Pages**.
-3. Source: **Deploy from a branch**.
-4. Branch: `main` / folder: `/docs`.
-5. Save, wait a minute, open the hub URL above.
+**Google Play:** `https://moeamara.github.io/spika-legal/privacy.html`
 
 ## App wiring
 
-In-app links are defined in `lib/core/constants/legal_config.dart`.
-Update `pagesBaseUrl` only if the Pages URL changes.
+In-app links: `lib/core/constants/legal_config.dart` → `pagesBaseUrl`.
 
-## Before Play submission
+## Local copies in this folder
 
-- [ ] Pages URL opens without login
-- [ ] Replace GitHub Issues with a real support email in these HTML files when you have one
-- [ ] Data safety form matches this Privacy Policy
-- [ ] Re-check when subscriptions or App Store launch
+The HTML/CSS here are the source drafts. Keep [`spika-legal`](https://github.com/MoeAmara/spika-legal) in sync when you edit them.
