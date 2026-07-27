@@ -24,10 +24,10 @@
     <header class="doc-head">
       <p class="doc-kicker">Privacy</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 26 July 2026 · Operated by Muhammad Abdelmaksoud Emara (“we”, “us”, “Spika”)</p>
+      <p class="meta">Effective 27 July 2026 · Operated by Muhammad Abdelmaksoud Emara (referred to in this Policy as “Spika”, “we”, or “us”)</p>
     </header>
     <article class="paper">
-<p>
+      <p>
         This Privacy Policy explains how Spika, a personal expense tracker mobile app,
         handles information when you use the app on Google Play (and later on the App Store).
       </p>
@@ -81,9 +81,14 @@
         </li>
         <li>
           <strong>Google Drive App Data (optional / when signed in):</strong>
-          Spika can upload an <em>encrypted</em> backup file to the hidden App Data folder
-          associated with your Google account. The backup is encrypted on device before upload.
-          Spika does not host that backup on a Spika server.
+          Spika can upload an encrypted backup file to the hidden App Data folder associated with
+          your Google account. The backup is encrypted on-device using AES-256-GCM before upload.
+          The encryption key is derived from your signed-in Google account identifier (via PBKDF2),
+          not from a randomly generated, device-only key, and is not stored anywhere by us.
+          In practice, this means the encryption keeps the backup file unreadable as plain data
+          if it were exposed on Drive or in transit — it is not an independent secret that only
+          you hold, since the key can, in principle, be re-derived by anyone who has both the
+          app’s code and your Google account identifier.
         </li>
         <li>
           <strong>Market rates:</strong> the app may request public market/price data over the internet.
@@ -109,7 +114,11 @@
       <ul>
         <li><strong>Google:</strong> Sign-In and optional Drive App Data backup/restore</li>
         <li><strong>Device OS / speech services:</strong> if you use microphone features</li>
-        <li><strong>Market data providers / CDN:</strong> for public rate lookups</li>
+        <li>
+          <strong>Market/price data providers:</strong>
+          fawazahmed0 currency-api (exchange rates), gold-api.com (live metal spot prices),
+          and World Bank Commodity Markets data (historical monthly reference prices)
+        </li>
         <li><strong>App stores:</strong> Google Play (and later Apple) for distribution and, in the future, paid subscriptions</li>
       </ul>
 
@@ -131,40 +140,76 @@
       <h2>9. Security</h2>
       <p>
         We use on-device storage and encrypted backups for Google Drive App Data.
+      </p>
+      <p>
+        Backup encryption uses AES-256-GCM with a key derived deterministically (via PBKDF2)
+        from your Google account id, not a randomly generated device-bound key. This means the
+        encryption’s main purpose is to keep the backup file unreadable as plain data at rest —
+        for example, if the Drive file itself were exposed independently of your Google account.
+        It does not provide protection equivalent to a passphrase or device-only key that only
+        you control, and it does not protect the backup from someone who already has access to
+        your signed-in Google account.
+      </p>
+      <p>
         No method of storage or transmission is perfectly secure. Protect your device
         and your Google account with strong locks and up-to-date software.
       </p>
 
-      <h2>10. Children</h2>
+      <h2>10. Analytics and crash reporting</h2>
+      <p>
+        Spika does not currently use any third-party analytics or crash-reporting service.
+        If we introduce one in the future (for example, to help us detect and fix app crashes),
+        we will update this Policy to name the service and describe what it collects before it
+        is enabled.
+      </p>
+
+      <h2>11. Children</h2>
       <p>
         Spika is not directed at children under 13 (or the minimum age required in your country).
         Do not use the app if you are below that age.
       </p>
 
-      <h2>11. International users</h2>
+      <h2>12. International users</h2>
       <p>
         The app may be used in different countries. Because data is primarily stored on your
         device and optionally in your own Google account, processing generally follows where
         you and your providers (Google / your device) operate.
       </p>
 
-      <h2>12. Your choices</h2>
+      <h2>13. Your choices</h2>
       <ul>
         <li>Use Spika without Google Sign-In (local-only features)</li>
         <li>Disable backup, notifications, or microphone access in system/app settings</li>
         <li>Sign out of Google from Settings</li>
+        <li>
+          <strong>Delete your data:</strong> use the in-app “Delete all data” control (Settings)
+          to permanently erase your local data on that device. This does not automatically remove
+          an existing Drive backup — remove that separately via the app’s backup controls or your
+          Google account.
+        </li>
         <li>Delete local data / uninstall the app</li>
-        <li>Email us at mooabdelmaqsoud@gmail.com for privacy questions</li>
+        <li>
+          Email us at
+          <a href="mailto:mooabdelmaqsoud@gmail.com">mooabdelmaqsoud@gmail.com</a>
+          for privacy questions or help with data deletion
+        </li>
       </ul>
 
-      <h2>13. Changes</h2>
+      <h2>14. Governing law</h2>
       <p>
-        We may update this Policy as Spika evolves (for example, when subscriptions or
-        App Store distribution launch). The “Effective date” above will change when we do.
-        Continued use after an update means you accept the revised Policy.
+        This Policy is governed by the laws applicable in Muhammad Abdelmaksoud Emara’s country
+        of residence, without regard to conflict-of-law rules, except where mandatory consumer
+        protections in your country require otherwise. Those mandatory rights still apply.
       </p>
 
-      <h2>14. Related</h2>
+      <h2>15. Changes</h2>
+      <p>
+        We may update this Policy as Spika evolves (for example, when subscriptions, App Store
+        distribution, or new third-party services launch). The “Effective date” above will change
+        when we do. Continued use after an update means you accept the revised Policy.
+      </p>
+
+      <h2>16. Related</h2>
       <p>
         See also our <a href="terms.html">Terms of Service</a>.
       </p>
