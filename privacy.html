@@ -88,13 +88,13 @@
           Spika can upload an encrypted backup file to the hidden App Data folder associated with
           your Google account.
           <p>
-            Spika encrypts the backup on your device before uploading it.
-            The payload key is a random 32-byte key stored in this device’s Keystore.
-            That key is wrapped with a slow KDF of your App Lock PIN so you can restore on a new phone
-            by typing the same PIN. Google cannot derive the key from your account id.
-            Restore is user-confirmed and requires the PIN typed on the device — biometrics are not used
-            for backup crypto and cannot restore on a new device.
-            Forgetting the PIN unlocks this phone after Google recovery but does not decrypt an existing Drive copy.
+            Spika encrypts the backup on your device before uploading it, using a key derived from
+            your App Lock PIN. This means you can restore your backup on a new phone by entering the
+            same PIN. Google cannot derive this key from your account. Restore is user-confirmed and
+            requires the PIN typed on the device — biometrics are not used for backup encryption and
+            cannot restore a backup on a new device. Forgetting your PIN lets you unlock this phone
+            through account-based recovery, but it does not decrypt an existing Drive backup — that
+            still requires the original PIN.
           </p>
         </li>
         <li>
@@ -104,10 +104,6 @@
         <li>
           <strong>Contact and feature polls:</strong> messages you submit (message text, optional reply email,
           locale, and OS) are POSTed to a Google Apps Script webhook that delivers them to us.
-        </li>
-        <li>
-          <strong>Cloud assist:</strong> only if a given build sets <code>SPIKA_AI_URL</code>.
-          The default store build does not send transcripts to a Spika cloud parser.
         </li>
         <li>
           <strong>Market rates:</strong> the app may request public market/price data over the internet.
@@ -233,7 +229,7 @@
         <li>Disable backup, notifications, or microphone access in system/app settings</li>
         <li>Sign out of Google from Settings</li>
         <li>
-          <strong>Forgot your app-lock PIN?</strong> Use the in-app PIN recovery flow, which verifies your identity through your signed-in Google account before resetting the PIN. Resetting the PIN does not decrypt an existing Drive backup — those files still need the old PIN.
+          <strong>Forgot your app-lock PIN?</strong> Use the in-app PIN recovery flow, which checks that the device is still signed in to the same Google account before allowing a PIN reset. This confirms account access on the device, not a separate identity check. Resetting the PIN does not decrypt an existing Drive backup — those files still need the old PIN.
         </li>
         <li>
           <strong>Delete your data:</strong> use the in-app “Delete all data” control (Settings)
