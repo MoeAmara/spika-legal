@@ -16,7 +16,7 @@ Base: `https://moeamara.github.io/spika-legal/`
 **Google Play:** `https://moeamara.github.io/spika-legal/privacy.html`
 
 **Operator:** Muhammad Abdelmaksoud Emara (individual developer)  
-**Contact:** mooabdelmaqsoud@gmail.com
+**Contact:** spika.support@gmail.com
 
 ## App wiring
 
