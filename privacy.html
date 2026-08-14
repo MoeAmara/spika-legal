@@ -89,10 +89,25 @@
           your Google account.
           <p>
             Spika encrypts the backup on your device before uploading it.
-            The backup restores automatically when you sign in with the same Google account on any device —
-            there is no separate backup password to set or remember.
-            Keep your Google account secure.
+            The payload key is a random 32-byte key stored in this device’s Keystore.
+            That key is wrapped with a slow KDF of your App Lock PIN so you can restore on a new phone
+            by typing the same PIN. Google cannot derive the key from your account id.
+            Restore is user-confirmed and requires the PIN typed on the device — biometrics are not used
+            for backup crypto and cannot restore on a new device.
+            Forgetting the PIN unlocks this phone after Google recovery but does not decrypt an existing Drive copy.
           </p>
+        </li>
+        <li>
+          <strong>Speech to text:</strong> Spika Now uses the device speech service. On Android that service
+          may send audio off the device according to the OS / speech-provider policy.
+        </li>
+        <li>
+          <strong>Contact and feature polls:</strong> messages you submit (message text, optional reply email,
+          locale, and OS) are POSTed to a Google Apps Script webhook that delivers them to us.
+        </li>
+        <li>
+          <strong>Cloud assist:</strong> only if a given build sets <code>SPIKA_AI_URL</code>.
+          The default store build does not send transcripts to a Spika cloud parser.
         </li>
         <li>
           <strong>Market rates:</strong> the app may request public market/price data over the internet.
@@ -104,7 +119,7 @@
       <ul>
         <li>Provide and improve the expense-tracking features you use</li>
         <li>Sign you in with Google and restore or create encrypted backups</li>
-        <li>Convert speech to text locally through the device speech services you allow</li>
+        <li>Convert speech to text through the device speech services you allow (this may leave the device on Android)</li>
         <li>Send local notifications you enable</li>
         <li>Show approximate market prices for supported metals/currencies</li>
         <li>Detect crashes and understand basic app usage so we can keep Spika working</li>
@@ -122,6 +137,9 @@
           Firebase Analytics, and Firebase Crashlytics
         </li>
         <li><strong>Device OS / speech services:</strong> if you use microphone features</li>
+        <li>
+          <strong>Contact form / feature polls:</strong> Google Apps Script webhook (message, optional reply email, locale, OS)
+        </li>
         <li>
           <strong>Market/price data providers:</strong>
           exchange-api (currency exchange rates), gold-api.com (live metal spot prices),
@@ -149,7 +167,7 @@
       <h2>9. Security</h2>
       <ul>
         <li>
-          <strong>App lock:</strong> if you set a PIN or enable biometric unlock, Spika blocks access to your financial data behind that lock, including when the app is opened through the Spika Now voice-entry shortcut (home screen widget). PIN attempts are rate-limited with an increasing wait after repeated failures, and if the app cannot verify your lock state for any reason (for example, a storage read error), it fails closed and blocks access rather than opening unlocked.
+          <strong>App lock:</strong> if you set a PIN or enable biometric unlock, Spika blocks access to your financial data in the main app. PIN attempts are rate-limited with an increasing wait after repeated failures, and if the app cannot verify your lock state for any reason (for example, a storage read error), it fails closed and blocks access rather than opening unlocked. The Spika Now home-screen widget does not require the PIN: it is write-only (log a transaction by voice) and does not show balances. The lock still applies when you open the main app.
         </li>
         <li>
           <strong>On-device database encryption:</strong> your local financial database is encrypted at rest using a randomly generated, device-bound key held in your device's secure hardware-backed storage (Android Keystore). This key is separate from your app-lock PIN and from backup encryption.
@@ -200,6 +218,10 @@
 
       <h2>12. International users</h2>
       <p>
+        On Huawei AppGallery, Google Play services are required for Google Sign-In and Drive backup.
+        The app still works offline without them.
+      </p>
+      <p>
         The app may be used in different countries. Because data is primarily stored on your
         device and optionally in your own Google account, processing generally follows where
         you and your providers (Google / your device) operate.
@@ -211,7 +233,7 @@
         <li>Disable backup, notifications, or microphone access in system/app settings</li>
         <li>Sign out of Google from Settings</li>
         <li>
-          <strong>Forgot your app-lock PIN?</strong> Use the in-app PIN recovery flow, which verifies your identity through your signed-in Google account before resetting the PIN.
+          <strong>Forgot your app-lock PIN?</strong> Use the in-app PIN recovery flow, which verifies your identity through your signed-in Google account before resetting the PIN. Resetting the PIN does not decrypt an existing Drive backup — those files still need the old PIN.
         </li>
         <li>
           <strong>Delete your data:</strong> use the in-app “Delete all data” control (Settings)
