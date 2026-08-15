@@ -24,20 +24,17 @@
     <header class="doc-head">
       <p class="doc-kicker">Privacy</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 10 August 2026 · Spika (referred to in this Policy as “Spika”, “we”, or “us”)</p>
+      <p class="meta">Effective 15 August 2026 · Spika</p>
     </header>
     <article class="paper">
       <p>
         This Privacy Policy explains how Spika, a personal expense tracker mobile app,
-        handles information when you use the app on Google Play, Huawei AppGallery, and (later) the App Store.
+        handles information when you use the Spika mobile app distributed on Google Play.
       </p>
 
       <h2>1. Who we are</h2>
       <p>
-        Spika is currently operated by an individual developer.
-        There is no separate company entity yet. If that changes, we will update this page.
-      </p>
-      <p>
+        Spika is operated by an individual developer.
         Contact:
         <a href="mailto:spika.support@gmail.com">spika.support@gmail.com</a>
       </p>
@@ -53,12 +50,14 @@
       <ul>
         <li>
           <strong>Information you enter:</strong> transactions, accounts, categories,
-          budgets/income settings, profile display name, and similar finance data you choose to save.
+          budgets/income settings, profile display name, optional custom profile photo stored locally,
+          and similar finance data you choose to save.
         </li>
         <li>
           <strong>Google account information (if you sign in):</strong> basic profile details
-          provided by Google Sign-In (such as name, email, and profile photo, when available)
-          to identify your session and enable backup/restore.
+          provided by Google Sign-In (such as name, email, and profile photo URL when available)
+          to identify your session. Drive backup access is requested only when you explicitly enable
+          backup or confirm a restore — not during ordinary sign-in.
         </li>
         <li>
           <strong>Device permissions you grant:</strong> microphone (for voice entry),
@@ -84,8 +83,9 @@
           <strong>On your device:</strong> primary storage uses a local database and local preferences.
         </li>
         <li>
-          <strong>Google Drive App Data (optional / when signed in):</strong>
-          Spika can upload an encrypted backup file to the hidden App Data folder associated with
+          <strong>Google Drive App Data (optional, explicit opt-in):</strong>
+          When you turn on Google Drive backup in Settings (and grant Drive App Data access),
+          Spika uploads an encrypted backup file to the hidden App Data folder associated with
           your Google account.
           <p>
             Spika encrypts the backup on your device before uploading it, using a key derived from
@@ -106,8 +106,11 @@
           locale, and OS) are POSTed to a Google Apps Script webhook that delivers them to us.
         </li>
         <li>
-          <strong>Market rates:</strong> the app may request public market/price data over the internet.
-          Those requests are for rates, not for uploading your transaction history.
+          <strong>Market rates:</strong> the app may request public market/price data from
+          <code>cdn.jsdelivr.net</code> (World Bank commodity reference data),
+          <code>currency-api.pages.dev</code> (currency exchange rates), and
+          <code>gold-api.com</code> (live metal spot prices). Those requests are for rates,
+          not for uploading your transaction history.
         </li>
       </ul>
 
@@ -138,16 +141,17 @@
         </li>
         <li>
           <strong>Market/price data providers:</strong>
-          exchange-api (currency exchange rates), gold-api.com (live metal spot prices),
-          and World Bank Commodity Markets data (historical monthly reference prices)
+          jsDelivr CDN (World Bank commodity reference data),
+          currency-api.pages.dev (currency exchange rates),
+          and gold-api.com (live metal spot prices)
         </li>
-        <li><strong>App stores:</strong> Google Play, Huawei AppGallery (and later Apple) for distribution and, in the future, paid subscriptions</li>
+        <li><strong>Google Play:</strong> distribution and, in the future, paid subscriptions</li>
       </ul>
 
       <h2>7. Subscriptions and payments (future)</h2>
       <p>
         Spika is free today. We may introduce paid subscriptions or premium features later.
-        If we do, purchases will be processed by the store (Google Play / Huawei AppGallery / App Store).
+        If we do, purchases will be processed by Google Play (and, if we expand to other stores later, by that store).
         We will not charge you without an in-app confirmation.
         Store payment details are handled by the store, not entered into Spika’s own forms.
       </p>
@@ -203,7 +207,8 @@
         </li>
       </ul>
       <p>
-        Uninstalling Spika stops further collection from that device.
+        Uninstalling Spika stops further collection from that device. Spika does not currently
+        provide an in-app toggle to disable Analytics or Crashlytics.
       </p>
 
       <h2>11. Children</h2>
@@ -214,7 +219,7 @@
 
       <h2>12. International users</h2>
       <p>
-        On Huawei AppGallery, Google Play services are required for Google Sign-In and Drive backup.
+        Google Play services are required for Google Sign-In and optional Drive backup.
         The app still works offline without them.
       </p>
       <p>
@@ -254,8 +259,8 @@
 
       <h2>15. Changes</h2>
       <p>
-        We may update this Policy as Spika evolves (for example, when subscriptions, Huawei AppGallery
-        or App Store distribution, or new third-party services launch). The “Effective date” above will change
+        We may update this Policy as Spika evolves (for example, when subscriptions, additional store distribution,
+        or new third-party services launch). The “Effective date” above will change
         when we do. Continued use after an update means you accept the revised Policy.
       </p>
 
