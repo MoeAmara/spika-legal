@@ -7,14 +7,14 @@
   var headings = paper.querySelectorAll("h2");
   if (!headings.length) return;
 
-  var toc = document.createElement("nav");
+  var isAr = document.documentElement.lang === "ar";
+  var toc = document.createElement("details");
   toc.className = "doc-toc";
-  toc.setAttribute("aria-label", document.documentElement.lang === "ar" ? "المحتويات" : "Contents");
+  toc.setAttribute("aria-label", isAr ? "المحتويات" : "Contents");
 
-  var title = document.createElement("p");
-  title.className = "doc-toc-title";
-  title.textContent = document.documentElement.lang === "ar" ? "المحتويات" : "Contents";
-  toc.appendChild(title);
+  var summary = document.createElement("summary");
+  summary.textContent = isAr ? "المحتويات" : "Table of contents";
+  toc.appendChild(summary);
 
   var list = document.createElement("ol");
   list.className = "doc-toc-list";
