@@ -13,7 +13,7 @@
   toc.setAttribute("aria-label", isAr ? "المحتويات" : "Contents");
 
   var summary = document.createElement("summary");
-  summary.textContent = isAr ? "المحتويات" : "Table of contents";
+  summary.textContent = isAr ? "في هذه الصفحة" : "On this page";
   toc.appendChild(summary);
 
   var list = document.createElement("ol");
@@ -22,7 +22,6 @@
   headings.forEach(function (heading, index) {
     var id = heading.id || "section-" + (index + 1);
     heading.id = id;
-
     var item = document.createElement("li");
     var link = document.createElement("a");
     link.href = "#" + id;

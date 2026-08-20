@@ -11,282 +11,152 @@
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Spika Legal">
         <img class="nav-wordmark" src="brand/spika_wordmark_light.png" alt="Spika" />
         <span class="brand-sub">Legal</span>
       </a>
       <nav class="lang" aria-label="Language">
-        <a class="active" href="privacy.html">EN</a>
-        <a href="privacy-ar.html">عربي</a>
+        <a class="active" href="privacy.html">English</a>
+        <a href="privacy-ar.html">العربية</a>
       </nav>
     </div>
   </header>
   <main class="shell">
     <p class="breadcrumb">
       <a href="index.html">Legal</a>
-      <span> / </span>
+      <span aria-hidden="true"> › </span>
       Privacy Policy
     </p>
 
     <header class="doc-head">
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 15 August 2026 · Spika (referred to in this Privacy Policy as “Spika”, “we”, or “us”)</p>
+      <p class="doc-date">Effective 15 August 2026</p>
+      <p class="doc-submeta">Spika (referred to in this Privacy Policy as “Spika”, “we”, or “us”)</p>
     </header>
 
     <article class="paper">
       <p>
-        This Privacy Policy explains how Spika, a personal expense tracker mobile app,
-        handles information when you use the Spika mobile app distributed on Google Play.
-      </p>
-
-      <h2>1. Who we are</h2>
-      <p>
-        Spika is operated by an individual developer.
-        Contact:
-        <a href="mailto:spika.support@gmail.com">spika.support@gmail.com</a>
-      </p>
-
-      <h2>2. What Spika is</h2>
-      <p>
-        Spika helps you track personal spending, accounts, categories, and optional
-        precious-metal balances. Features may include voice logging (“Spika Now”),
-        local notifications, market rate lookups, and optional encrypted backup via Google.
-      </p>
-
-      <h2>3. Information we process</h2>
-      <ul>
-        <li>
-          <strong>Information you enter:</strong> transactions, accounts, categories,
-          budgets/income settings, profile display name, optional custom profile photo stored locally,
-          and similar finance data you choose to save.
-        </li>
-        <li>
-          <strong>Google account information (if you sign in):</strong> basic profile details
-          provided by Google Sign-In (such as name, email, and profile photo URL when available)
-          to identify your session. Drive backup access is requested only when you explicitly enable
-          backup or confirm a restore — not during ordinary sign-in.
-        </li>
-        <li>
-          <strong>Device permissions you grant:</strong> microphone (for voice entry),
-          notifications, and network access.
-        </li>
-        <li>
-          <strong>Technical data on device:</strong> app preferences (theme, language, currency,
-          backup settings) stored locally.
-        </li>
-        <li>
-          <strong>Diagnostics:</strong> crash reports and basic app-usage analytics collected through
-          Google Firebase (see Section 10). These are not a copy of your financial ledger.
-        </li>
-      </ul>
-      <p>
-        Spika is designed so your financial records stay on your device by default.
-        We do not operate a Spika-owned cloud database that stores your transactions for us to read.
-      </p>
-
-      <h2>4. Where your data is stored</h2>
-      <ul>
-        <li>
-          <strong>On your device:</strong> primary storage uses a local database and local preferences.
-        </li>
-        <li>
-          <strong>Google Drive App Data (optional, explicit opt-in):</strong>
-          When you turn on Google Drive backup in Settings (and grant Drive App Data access),
-          Spika uploads an encrypted backup file to the hidden App Data folder associated with
-          your Google account.
-          <p>
-            Spika encrypts the backup on your device before uploading it, using a key derived from
-            your App Lock PIN. This means you can restore your backup on a new phone by entering the
-            same PIN. Google cannot derive this key from your account. Restore is user-confirmed and
-            requires the PIN typed on the device — biometrics are not used for backup encryption and
-            cannot restore a backup on a new device. Forgetting your PIN lets you unlock this phone
-            through account-based recovery, but it does not decrypt an existing Drive backup — that
-            still requires the original PIN.
-          </p>
-        </li>
-        <li>
-          <strong>Speech to text:</strong> Spika Now uses the device speech service. On Android that service
-          may send audio off the device according to the OS / speech-provider policy.
-        </li>
-        <li>
-          <strong>Contact and feature polls:</strong> messages you submit (message text, optional reply email,
-          locale, and OS) are POSTed to a Google Apps Script webhook that delivers them to us.
-        </li>
-        <li>
-          <strong>Market rates:</strong> the app may request public market/price data from
-          <code>cdn.jsdelivr.net</code> (World Bank commodity reference data),
-          <code>currency-api.pages.dev</code> (currency exchange rates), and
-          <code>gold-api.com</code> (live metal spot prices). Those requests are for rates,
-          not for uploading your transaction history.
-        </li>
-      </ul>
-
-      <h2>5. How we use information</h2>
-      <ul>
-        <li>Provide and improve the expense-tracking features you use</li>
-        <li>Sign you in with Google and restore or create encrypted backups</li>
-        <li>Convert speech to text through the device speech services you allow (this may leave the device on Android)</li>
-        <li>Send local notifications you enable</li>
-        <li>Show approximate market prices for supported metals/currencies</li>
-        <li>Detect crashes and understand basic app usage so we can keep Spika working</li>
-      </ul>
-
-      <h2>6. Sharing</h2>
-      <p>
-        We do not sell your personal or financial data.
-        We do not share your transaction history with advertisers.
-      </p>
-      <p>Limited third-party processing happens only as needed to run the app:</p>
-      <ul>
-        <li>
-          <strong>Google:</strong> Sign-In, optional Drive App Data backup/restore,
-          Firebase Analytics, and Firebase Crashlytics
-        </li>
-        <li><strong>Device OS / speech services:</strong> if you use microphone features</li>
-        <li>
-          <strong>Contact form / feature polls:</strong> Google Apps Script webhook (message, optional reply email, locale, OS)
-        </li>
-        <li>
-          <strong>Market/price data providers:</strong>
-          jsDelivr CDN (World Bank commodity reference data),
-          currency-api.pages.dev (currency exchange rates),
-          and gold-api.com (live metal spot prices)
-        </li>
-        <li><strong>Google Play:</strong> distribution and, in the future, paid subscriptions</li>
-      </ul>
-
-      <h2>7. Subscriptions and payments (future)</h2>
-      <p>
-        Spika is free today. We may introduce paid subscriptions or premium features later.
-        If we do, purchases will be processed by Google Play (and, if we expand to other stores later, by that store).
-        We will not charge you without an in-app confirmation.
-        Store payment details are handled by the store, not entered into Spika’s own forms.
-      </p>
-
-      <h2>8. Retention and deletion</h2>
-      <ul>
-        <li>Local data remains until you delete it in-app or uninstall Spika.</li>
-        <li>Encrypted Drive backups remain in your Google App Data until removed by restore/overwrite flows, Google account tools, or app controls that clear them.</li>
-        <li>Uninstalling Spika removes local data on that device; it does not automatically erase a Drive backup that already exists in your Google account.</li>
-        <li>Firebase Analytics and Crashlytics data is retained by Google according to Firebase practices until we delete it from the project. Uninstalling Spika stops further collection from that device.</li>
-      </ul>
-
-      <h2>9. Security</h2>
-      <ul>
-        <li>
-          <strong>App lock:</strong> if you set a PIN or enable biometric unlock, Spika blocks access to your financial data in the main app. PIN attempts are rate-limited with an increasing wait after repeated failures, and if the app cannot verify your lock state for any reason (for example, a storage read error), it fails closed and blocks access rather than opening unlocked. The Spika Now home-screen widget does not require the PIN: it is write-only (log a transaction by voice) and does not show balances. The lock still applies when you open the main app.
-        </li>
-        <li>
-          <strong>On-device database encryption:</strong> your local financial database is encrypted at rest using a randomly generated, device-bound key held in your device's secure hardware-backed storage (Android Keystore). This key is separate from your app-lock PIN and from backup encryption.
-        </li>
-        <li>
-          <strong>Backup encryption:</strong> see Section 4 above for how Drive backups are encrypted and the limits of that protection.
-        </li>
-        <li>
-          <strong>Screenshots and app-switcher previews:</strong> Spika does not block screenshots or recent-apps preview thumbnails. Anyone with access to your unlocked device can capture what is on screen.
-        </li>
-        <li>
-          <strong>Signed builds:</strong> release versions of Spika distributed through app stores are signed with a private release key that is not included in the app's source code.
-        </li>
-      </ul>
-      <p>
-        No method of storage or transmission is perfectly secure. Protect your device
-        and your Google account with strong locks and up-to-date software.
-      </p>
-
-      <h2>10. Analytics and crash reporting</h2>
-      <p>
-        Spika uses Google Firebase Analytics and Firebase Crashlytics to keep the app reliable.
-        These services are operated by Google. They do not receive your transaction history,
-        account balances, or other financial records you enter in Spika.
-      </p>
-      <ul>
-        <li>
-          <strong>Firebase Analytics:</strong> automatic app-usage events such as first open and sessions,
-          plus basic device and app information (for example OS version and app version).
-          Spika does not currently log custom events that include the contents of your finances.
-        </li>
-        <li>
-          <strong>Firebase Crashlytics:</strong> crash and error reports, including stack traces,
-          device model, OS version, and app version, so we can find and fix bugs.
-          A crash log is not intended to include your ledger; it may include technical details
-          from the failing code path.
-        </li>
-      </ul>
-      <p>
-        Uninstalling Spika stops further collection from that device. Spika does not currently
-        provide an in-app toggle to disable Analytics or Crashlytics.
-      </p>
-
-      <h2>11. Children</h2>
-      <p>
-        Spika is not directed at children under 13 (or the minimum age required in your country).
-        Do not use the app if you are below that age.
-      </p>
-
-      <h2>12. International users</h2>
-      <p>
-        Google Play services are required for Google Sign-In and optional Drive backup.
-        The app still works offline without them.
-      </p>
-      <p>
-        The app may be used in different countries. Because data is primarily stored on your
-        device and optionally in your own Google account, processing generally follows where
-        you and your providers (Google / your device) operate.
-      </p>
-
-      <h2>13. Your choices</h2>
-      <ul>
-        <li>Use Spika without Google Sign-In (local-only features)</li>
-        <li>Disable backup, notifications, or microphone access in system/app settings</li>
-        <li>Sign out of Google from Settings</li>
-        <li>
-          <strong>Forgot your app-lock PIN?</strong> Use the in-app PIN recovery flow, which checks that the device is still signed in to the same Google account before allowing a PIN reset. This confirms account access on the device, not a separate identity check. Resetting the PIN does not decrypt an existing Drive backup — those files still need the old PIN.
-        </li>
-        <li>
-          <strong>Delete your data:</strong> use the in-app “Delete all data” control (Settings)
-          to permanently erase your local data on that device. This does not automatically remove
-          an existing Drive backup — remove that separately via the app’s backup controls or your
-          Google account.
-        </li>
-        <li>Delete local data / uninstall the app</li>
-        <li>
-          Email us at
-          <a href="mailto:spika.support@gmail.com">spika.support@gmail.com</a>
-          for privacy questions or help with data deletion
-        </li>
-      </ul>
-
-      <h2>14. Governing law</h2>
-      <p>
-        This Policy is governed by the laws applicable in the operator’s country
-        of residence, without regard to conflict-of-law rules, except where mandatory consumer
-        protections in your country require otherwise. Those mandatory rights still apply.
-      </p>
-
-      <h2>15. Changes</h2>
-      <p>
-        We may update this Policy as Spika evolves (for example, when subscriptions, additional store distribution,
-        or new third-party services launch). The “Effective date” above will change
-        when we do. Continued use after an update means you accept the revised Policy.
-      </p>
-
-      <h2>16. Related</h2>
-      <p>
-        See also our <a href="terms.html">Terms of Service</a>.
+        This Privacy Policy explains what information Spika collects, how it's used, and how you
+        can control it. Spika is a personal finance tracking app distributed on Google Play.
       </p>
 
       <aside class="doc-callout">
         <p>
-          Privacy questions or data deletion:
-          <a href="mailto:spika.support@gmail.com">spika.support@gmail.com</a>
+          <strong>In short:</strong> your financial data stays on your device unless you turn on
+          Google Drive backup, which is encrypted with your App Lock PIN. We don't sell your data,
+          and we don't share your transaction history with anyone.
         </p>
       </aside>
+
+      <h2>1. Information we collect</h2>
+      <ul>
+        <li><strong>What you enter:</strong> transactions, accounts, categories, budget/income settings, your display name, and an optional profile photo stored locally.</li>
+        <li><strong>Google account info (only if you sign in):</strong> basic profile details from Google Sign-In — name, email, photo. We only request Drive access when you turn on backup or confirm a restore, never during ordinary sign-in.</li>
+        <li><strong>Permissions you grant:</strong> microphone (for voice entry), notifications, network access.</li>
+        <li><strong>App preferences stored on your device:</strong> theme, language, currency, backup settings.</li>
+        <li><strong>Diagnostics:</strong> crash reports and basic usage stats via Firebase (Section 4). These never include your financial data.</li>
+      </ul>
+      <p>
+        By default, everything above stays on your device. We don't run a Spika-owned server
+        that stores or reads your transactions.
+      </p>
+
+      <h2>2. Backups (Google Drive, optional)</h2>
+      <p>
+        When you turn on Drive backup in Settings, Spika encrypts your data on your device —
+        using a key derived from your App Lock PIN — before uploading it to the hidden App Data
+        folder in your Google account. Google can't derive this key from your account, and
+        restoring on a new device requires the same PIN (biometrics don't work for this). If you
+        forget your PIN, account recovery unlocks the app but can't decrypt an existing backup —
+        only the original PIN can.
+      </p>
+
+      <h2>3. Other places data touches</h2>
+      <ul>
+        <li>Voice entry (Spika Now) uses your device's built-in speech-to-text service, which may send audio off-device depending on your OS and speech provider.</li>
+        <li>Market prices (metals, currencies) are fetched from public data providers — these requests never include your transaction data.</li>
+        <li>If you contact us or answer a feature poll, that message (plus your locale and OS) reaches us through a Google Apps Script webhook.</li>
+      </ul>
+
+      <h2>4. Who we share with</h2>
+      <p>We don't sell your data or share your transaction history with advertisers. Limited processing happens through:</p>
+      <ul>
+        <li><strong>Google</strong> — Sign-In, Drive backup, Firebase Analytics and Crashlytics</li>
+        <li><strong>Your device's speech service</strong> — if you use voice entry</li>
+        <li><strong>Google Apps Script</strong> — for contact and feedback messages</li>
+        <li><strong>Market data providers</strong> — jsDelivr (World Bank reference data), currency-api.pages.dev, gold-api.com</li>
+        <li><strong>Google Play</strong> — app distribution, and future subscriptions</li>
+      </ul>
+      <p>
+        Firebase Analytics and Crashlytics never receive your financial data — only usage events
+        (app opens, sessions) and crash reports (stack traces, device and app version).
+      </p>
+
+      <h2>5. Security</h2>
+      <ul>
+        <li><strong>App Lock:</strong> a PIN or biometric lock blocks the main app. Repeated wrong PIN attempts are throttled, and if Spika can't verify the lock state, it stays locked rather than opening.</li>
+        <li>Your local database is encrypted at rest with a device-bound key stored in Android Keystore — separate from your PIN and from backup encryption.</li>
+        <li>Spika doesn't block screenshots or recent-apps previews — anyone with your unlocked device can see what's on screen.</li>
+        <li>Release builds are signed with a private key kept outside the app's source code.</li>
+      </ul>
+      <p>No storage or transmission method is perfectly secure — keep your device and Google account protected.</p>
+
+      <h2>6. Retention &amp; deletion</h2>
+      <ul>
+        <li>Local data stays until you delete it in-app or uninstall Spika.</li>
+        <li>Drive backups stay until you remove them (via restore/overwrite, Google account tools, or in-app controls) — uninstalling doesn't delete an existing backup.</li>
+        <li>Firebase data is kept by Google per their standard practices until we delete it; uninstalling stops further collection from that device.</li>
+      </ul>
+
+      <h2>7. Your choices</h2>
+      <ul>
+        <li>Use Spika without Google Sign-In (local-only features)</li>
+        <li>Turn off backup, notifications, or microphone access anytime</li>
+        <li>Sign out of Google from Settings</li>
+        <li><strong>Forgot your PIN?</strong> Use in-app PIN recovery — it confirms you're still signed into the same Google account, then lets you reset the PIN. This doesn't decrypt an existing Drive backup, which still needs the original PIN.</li>
+        <li><strong>Delete your data:</strong> use “Delete all data” in Settings for local data, or remove a Drive backup separately via backup controls or your Google account.</li>
+        <li>Email <a href="mailto:spika.support@gmail.com">spika.support@gmail.com</a> for anything else</li>
+      </ul>
+
+      <h2>8. Children</h2>
+      <p>Spika isn't directed at children under 13 (or the minimum age required where you live). Please don't use it if you're under that age.</p>
+
+      <h2>9. International users</h2>
+      <p>
+        Google Play services are required for Sign-In and Drive backup; the app works offline
+        without them. Since your data lives mainly on your device and your own Google account,
+        processing generally follows wherever you and Google operate.
+      </p>
+
+      <h2>10. Subscriptions (future)</h2>
+      <p>
+        Spika is free today. If we add paid plans later, Google Play (or another store, if we
+        expand distribution) will handle billing, prices will be shown before purchase, and we
+        won't charge you without your confirmation.
+      </p>
+
+      <h2>11. Changes</h2>
+      <p>
+        We'll update the effective date above whenever we revise this Policy. Continuing to use
+        Spika after a change means you accept the revised Policy.
+      </p>
+
+      <h2>12. Governing law</h2>
+      <p>
+        This Policy follows the laws of the operator's country of residence, except where
+        mandatory consumer protections in your country require otherwise — those rights still apply.
+      </p>
+
+      <h2>13. Contact</h2>
+      <p>
+        <a href="mailto:spika.support@gmail.com">spika.support@gmail.com</a> — also see our
+        <a href="terms.html">Terms of Service</a>.
+      </p>
     </article>
   </main>
   <footer class="site-foot">
     <div class="site-foot-inner">
-      <span>© 2026 Spika</span>
+      <span>Copyright © 2026 Spika. All rights reserved.</span>
       <nav class="site-foot-links" aria-label="Legal documents">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
