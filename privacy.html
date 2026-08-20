@@ -21,11 +21,21 @@
     </nav>
   </header>
   <main class="shell">
+    <nav class="doc-toolbar" aria-label="Document navigation">
+      <a class="doc-back" href="index.html">Legal center</a>
+      <div class="doc-switch" aria-label="Switch document">
+        <a href="privacy.html" class="active">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </nav>
+
     <header class="doc-head">
       <p class="doc-kicker">Privacy</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective 15 August 2026 · Spika</p>
+      <p class="meta">Effective 15 August 2026 · Spika (referred to in this Privacy Policy as “Spika”, “we”, or “us”)</p>
     </header>
+
+    <div class="doc-layout">
     <article class="paper">
       <p>
         This Privacy Policy explains how Spika, a personal expense tracker mobile app,
@@ -176,7 +186,7 @@
           <strong>Backup encryption:</strong> see Section 4 above for how Drive backups are encrypted and the limits of that protection.
         </li>
         <li>
-          <strong>Screenshots and app-switcher previews:</strong> on Android, Spika blocks screenshots and recent-apps preview thumbnails of screens showing financial information.
+          <strong>Screenshots and app-switcher previews:</strong> Spika does not block screenshots or recent-apps preview thumbnails. Anyone with access to your unlocked device can capture what is on screen.
         </li>
         <li>
           <strong>Signed builds:</strong> release versions of Spika distributed through app stores are signed with a private release key that is not included in the app's source code.
@@ -268,8 +278,25 @@
       <p>
         See also our <a href="terms.html">Terms of Service</a>.
       </p>
+
+      <aside class="doc-callout">
+        <p>
+          Privacy questions or data deletion:
+          <a href="mailto:spika.support@gmail.com">spika.support@gmail.com</a>
+        </p>
+      </aside>
     </article>
+    </div>
   </main>
-  <footer class="site-foot">© 2026 Spika · <a href="mailto:spika.support@gmail.com">Contact</a></footer>
+  <footer class="site-foot">
+    <span>© 2026 Spika</span>
+    <nav class="site-foot-links" aria-label="Legal documents">
+      <a href="index.html">Legal center</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:spika.support@gmail.com">Contact</a>
+    </nav>
+  </footer>
+  <script src="legal.js" defer></script>
 </body>
 </html>

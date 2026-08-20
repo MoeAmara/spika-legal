@@ -29,7 +29,7 @@ When you update legal HTML in this folder, sync to the public repo:
 1. Clone or open [`MoeAmara/spika-legal`](https://github.com/MoeAmara/spika-legal).
 2. Copy these files from `docs/` into the repo root (same paths):
    - `privacy.html`, `privacy-ar.html`, `terms.html`, `terms-ar.html`
-   - `styles.css`
+   - `styles.css`, `legal.js`
    - `index.html`, `index-ar.html` (if hub pages changed)
    - `brand/` (logos/wordmarks)
 3. Commit and push to `main` (GitHub Pages source branch).

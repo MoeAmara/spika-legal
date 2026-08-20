@@ -21,11 +21,21 @@
     </nav>
   </header>
   <main class="shell">
+    <nav class="doc-toolbar" aria-label="Document navigation">
+      <a class="doc-back" href="index.html">Legal center</a>
+      <div class="doc-switch" aria-label="Switch document">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html" class="active">Terms</a>
+      </div>
+    </nav>
+
     <header class="doc-head">
       <p class="doc-kicker">Terms</p>
       <h1>Terms of Service</h1>
-      <p class="meta">Effective 10 August 2026 · Spika (referred to in these Terms as “Spika”, “we”, or “us”)</p>
+      <p class="meta">Effective 15 August 2026 · Spika (referred to in these Terms as “Spika”, “we”, or “us”)</p>
     </header>
+
+    <div class="doc-layout">
     <article class="paper">
       <p>
         These Terms govern your use of the Spika mobile application.
@@ -170,8 +180,24 @@
         Questions about these Terms:
         <a href="mailto:spika.support@gmail.com">spika.support@gmail.com</a>
       </p>
+
+      <aside class="doc-callout">
+        <p>
+          Also read our <a href="privacy.html">Privacy Policy</a> for how we handle your data.
+        </p>
+      </aside>
     </article>
+    </div>
   </main>
-  <footer class="site-foot">© 2026 Spika · <a href="mailto:spika.support@gmail.com">Contact</a></footer>
+  <footer class="site-foot">
+    <span>© 2026 Spika</span>
+    <nav class="site-foot-links" aria-label="Legal documents">
+      <a href="index.html">Legal center</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:spika.support@gmail.com">Contact</a>
+    </nav>
+  </footer>
+  <script src="legal.js" defer></script>
 </body>
 </html>
